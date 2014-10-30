@@ -81,7 +81,8 @@ static NSString *const kIdentifier = @"MovieCell";
     // Configure the cell
     Movie *movie = [self.movies objectAtIndex:indexPath.item];
     cell.movieLabel.text = movie.title;
-     
+    [cell.moviePoster sd_setImageWithURL:[NSURL URLWithString:movie.posterPic]];
+    
     return cell;
 }
 

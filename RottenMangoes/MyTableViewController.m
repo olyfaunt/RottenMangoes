@@ -52,9 +52,12 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // Update the UI
                     
+                    if (self.reviewsArray !=nil) {
+                    
                     Reviews *reviewOne = self.reviewsArray[0];
                     self.criticLabel.text = reviewOne.critic;
                     self.reviewsTextView.text = reviewOne.quote;
+                    }
                     
                 });
         

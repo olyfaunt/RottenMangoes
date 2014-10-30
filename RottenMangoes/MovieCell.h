@@ -12,7 +12,7 @@
 
 @interface MovieCell : UICollectionViewCell <UIGestureRecognizerDelegate>
 
-
 @property(nonatomic, strong) IBOutlet UILabel *movieLabel;
+@property(nonatomic, strong) IBOutlet UIImageView *moviePoster;
 
 @end

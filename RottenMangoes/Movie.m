@@ -22,6 +22,8 @@
         self.synopsis = [jsonDictionary objectForKey:@"synopsis"];
         NSDictionary *linksDictionary = [jsonDictionary objectForKey:@"links"];
         self.reviews = [linksDictionary objectForKey:@"reviews"];
+        NSDictionary *postersDictionary = [jsonDictionary objectForKey:@"posters"];
+        self.posterPic = [postersDictionary objectForKey:@"thumbnail"];
         
     }
     return self;

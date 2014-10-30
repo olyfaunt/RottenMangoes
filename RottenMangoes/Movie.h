@@ -19,5 +19,6 @@
 @property (readwrite) NSString *theaterReleaseDate;
 @property (readwrite) NSString *synopsis;
 @property (readwrite) NSURL *reviews;
+@property (readwrite) NSString *posterPic;
 
 @end
