@@ -100,6 +100,8 @@
         NSLog(@"Finding address");
         if (error) {
             NSLog(@"Error %@", error.description);
+            
+            //only run once you get placemarks:
         } else if (placemarks){
             MKPlacemark *placemark = [placemarks lastObject];
             NSString *fullAddress = [placemark.addressDictionary description];
@@ -127,7 +129,7 @@
             
             [theatreBuilder getTheatres:url withCompletion:^(NSMutableArray *theatres) {
             
-                [self.theatresArray addObjectsFromArray:theatres];
+                [self.theatresArray addObjectsFromArray:theatres]; //get the completed theatresArray from the completion block. then run the following code:
                 NSLog(@"theatres: %@", theatres);
                 NSLog(@"self.theatresArray: %@", self.theatresArray);
                 

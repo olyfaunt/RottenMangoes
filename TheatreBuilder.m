@@ -10,6 +10,8 @@
 
 @implementation TheatreBuilder
 
+
+
 -(void)getTheatres:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion {
     
     self.theatresArray = [NSMutableArray array];
@@ -34,6 +36,7 @@
             [self.theatresArray addObject:theatre];
         }
         
+        //return block only when completion(true)
         completion(self.theatresArray);
         
     }];
