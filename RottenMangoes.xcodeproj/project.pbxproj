@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9916C1311A02C66F00389937 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9916C12F1A02C66F00389937 /* AddressBook.framework */; };
+		9916C1321A02C66F00389937 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9916C1301A02C66F00389937 /* AddressBookUI.framework */; };
+		9916C1351A02CC5800389937 /* TheatreBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9916C1341A02CC5800389937 /* TheatreBuilder.m */; };
+		9916C1371A02D52000389937 /* vancouver.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9916C1361A02D52000389937 /* vancouver.gpx */; };
 		992A140A1A00E3D400606F97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14091A00E3D400606F97 /* main.m */; };
 		992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A140C1A00E3D400606F97 /* AppDelegate.m */; };
 		992A14131A00E3D400606F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992A14111A00E3D400606F97 /* Main.storyboard */; };
@@ -18,6 +22,8 @@
 		993D0EFB1A0231CA00D42FAF /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 993D0EFA1A0231CA00D42FAF /* map.png */; };
 		993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0EFD1A0232B000D42FAF /* MapViewController.m */; };
 		993D0F041A02A98300D42FAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D0F031A02A98300D42FAF /* MapKit.framework */; };
+		993D0F071A02B0F200D42FAF /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0F061A02B0F200D42FAF /* Theatre.m */; };
+		993D0F091A02B86B00D42FAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D0F081A02B86B00D42FAF /* CoreLocation.framework */; };
 		993F87491A019F090086AA04 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87481A019F090086AA04 /* MovieCell.m */; };
 		993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874B1A01A3630086AA04 /* MyCollectionViewController.m */; };
 		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
@@ -36,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9916C12F1A02C66F00389937 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		9916C1301A02C66F00389937 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		9916C1331A02CC5800389937 /* TheatreBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TheatreBuilder.h; path = ../TheatreBuilder.h; sourceTree = "<group>"; };
+		9916C1341A02CC5800389937 /* TheatreBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TheatreBuilder.m; path = ../TheatreBuilder.m; sourceTree = "<group>"; };
+		9916C1361A02D52000389937 /* vancouver.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vancouver.gpx; sourceTree = "<group>"; };
 		992A14041A00E3D400606F97 /* RottenMangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenMangoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		992A14081A00E3D400606F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992A14091A00E3D400606F97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +67,9 @@
 		993D0EFC1A0232B000D42FAF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		993D0EFD1A0232B000D42FAF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		993D0F031A02A98300D42FAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		993D0F051A02B0F200D42FAF /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theatre.h; path = ../Theatre.h; sourceTree = "<group>"; };
+		993D0F061A02B0F200D42FAF /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theatre.m; path = ../Theatre.m; sourceTree = "<group>"; };
+		993D0F081A02B86B00D42FAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		993F87471A019F090086AA04 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		993F87481A019F090086AA04 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		993F874A1A01A3630086AA04 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
@@ -73,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9916C1311A02C66F00389937 /* AddressBook.framework in Frameworks */,
+				9916C1321A02C66F00389937 /* AddressBookUI.framework in Frameworks */,
+				993D0F091A02B86B00D42FAF /* CoreLocation.framework in Frameworks */,
 				993D0F041A02A98300D42FAF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +107,10 @@
 		992A13FB1A00E3D400606F97 = {
 			isa = PBXGroup;
 			children = (
+				9916C1361A02D52000389937 /* vancouver.gpx */,
+				9916C12F1A02C66F00389937 /* AddressBook.framework */,
+				9916C1301A02C66F00389937 /* AddressBookUI.framework */,
+				993D0F081A02B86B00D42FAF /* CoreLocation.framework */,
 				993D0F031A02A98300D42FAF /* MapKit.framework */,
 				992A14061A00E3D400606F97 /* RottenMangoes */,
 				992A14201A00E3D400606F97 /* RottenMangoesTests */,
@@ -171,6 +192,8 @@
 				992A14321A00EB0700606F97 /* Movie.m */,
 				993F87501A01BFE60086AA04 /* Reviews.h */,
 				993F87511A01BFE60086AA04 /* Reviews.m */,
+				993D0F051A02B0F200D42FAF /* Theatre.h */,
+				993D0F061A02B0F200D42FAF /* Theatre.m */,
 				993D0F011A02352800D42FAF /* JSON Helpers */,
 			);
 			name = Objects;
@@ -183,6 +206,8 @@
 				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
 				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
 				993F87541A01CA820086AA04 /* ReviewsBuilder.m */,
+				9916C1331A02CC5800389937 /* TheatreBuilder.h */,
+				9916C1341A02CC5800389937 /* TheatreBuilder.m */,
 			);
 			name = "JSON Helpers";
 			sourceTree = "<group>";
@@ -277,6 +302,7 @@
 			files = (
 				992A14131A00E3D400606F97 /* Main.storyboard in Resources */,
 				992A14181A00E3D400606F97 /* LaunchScreen.xib in Resources */,
+				9916C1371A02D52000389937 /* vancouver.gpx in Resources */,
 				992A14151A00E3D400606F97 /* Images.xcassets in Resources */,
 				993D0EFB1A0231CA00D42FAF /* map.png in Resources */,
 			);
@@ -299,9 +325,11 @@
 				992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */,
 				993F87521A01BFE60086AA04 /* Reviews.m in Sources */,
 				993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */,
+				9916C1351A02CC5800389937 /* TheatreBuilder.m in Sources */,
 				993F87491A019F090086AA04 /* MovieCell.m in Sources */,
 				992A14331A00EB0700606F97 /* Movie.m in Sources */,
 				993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */,
+				993D0F071A02B0F200D42FAF /* Theatre.m in Sources */,
 				993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */,
 				993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */,
 				992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */,

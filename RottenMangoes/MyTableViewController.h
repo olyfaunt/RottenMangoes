@@ -12,6 +12,7 @@
 #import "MovieCell.h"
 #import "ReviewsBuilder.h"
 #import "Reviews.h"
+#import "MapViewController.h"
 
 @interface MyTableViewController : UITableViewController <UITextViewDelegate>
 

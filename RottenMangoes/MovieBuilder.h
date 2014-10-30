@@ -10,9 +10,7 @@
 
 @interface MovieBuilder : NSObject
 
-
 @property (nonatomic, strong) NSMutableArray *moviesArray;
-@property (nonatomic, strong) NSURLSessionDataTask *downloadTask;
 
 -(void)getMoviesFromRottenMangoes:(NSURL*)url withCompletion: (void (^)(NSMutableArray *movies))completion;
 

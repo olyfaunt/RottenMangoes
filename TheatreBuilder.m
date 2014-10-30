@@ -1,22 +1,20 @@
 //
-//  MovieBuilder.m
+//  TheatreBuilder.m
 //  RottenMangoes
 //
-//  Created by Audrey Jun on 2014-10-29.
+//  Created by Audrey Jun on 2014-10-30.
 //  Copyright (c) 2014 audreyjun. All rights reserved.
 //
 
-#import "MovieBuilder.h"
-#import "Movie.h"
+#import "TheatreBuilder.h"
 
-@implementation MovieBuilder
+@implementation TheatreBuilder
 
--(void)getMoviesFromRottenMangoes:(NSURL*)url withCompletion: (void (^)(NSMutableArray *movies))completion{
-    //code here instead
-
-    self.moviesArray = [NSMutableArray array];
+-(void)getTheatresFromGoogle:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion {
     
-    // Return the array of Movie objects
+    self.theatresArray = [NSMutableArray array];
+    
+    // Return the array of Theatre Objects
     //pass this in at the end of asynchronous call, completion(nil) upon error.
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -26,20 +24,17 @@
         //handle response
         NSDictionary *jsonDictionary = [self processResponseUsingData:data];
         
-        // Get an array of dictionaries with the key "movies"
-        NSArray *dictsArray = [jsonDictionary valueForKey:@"movies"];
+        // Get an array of dictionaries with the key "theatres"
+        NSArray *dictsArray = [jsonDictionary valueForKey:@"theatres"];
         
         // Iterate through the array of dictionaries
-        for(id currentMovie in dictsArray) {
+        for(id currentTheatre in dictsArray) {
             // Create a new Movie object for each one and initialise it with information in the dictionary
-            Movie *movie = [[Movie alloc] initWithJSONDictionary:currentMovie];
-            // Add the Movie object to the array
-//            NSLog(@"movie.title :%@",movie.title );
-//            NSLog(@"movie.synopsis :%@", movie.synopsis);
-            [self.moviesArray addObject:movie];
+            Theatre *theatre = [[Theatre alloc] initWithJSONDictionary:currentTheatre];
+            [self.theatresArray addObject:theatre];
         }
         
-        completion(self.moviesArray);
+        completion(self.theatresArray);
         
     }];
     
@@ -55,12 +50,10 @@
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data
                                                              options:NSJSONReadingAllowFragments error:&parseJsonError];
     if (!parseJsonError) {
-//        NSLog(@"json data = %@", jsonDict);
+        //        NSLog(@"json data = %@", jsonDict);
     }
     
     return jsonDict;
 }
-
-
 
 @end

@@ -182,7 +182,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="LwL-uV-R45" kind="presentation" id="UFl-8f-zFk"/>
+                                                        <segue destination="LwL-uV-R45" kind="presentation" identifier="mapSegue" id="UFl-8f-zFk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

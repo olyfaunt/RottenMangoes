@@ -90,6 +90,16 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"mapSegue"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        MapViewController *mapViewController = (MapViewController *)[navigationController topViewController];
+        mapViewController.movie = self.movie;
+        
+    }
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
