@@ -16,7 +16,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = true;
+    
+    CLLocationCoordinate2D startingLocation;
+    startingLocation.latitude =  49.281815;
+    startingLocation.longitude = -123.108219;
+    
+//    [self.mapView setCenterCoordinate: startingLocation];
+    
+    MKCoordinateRegion startingRegion;
+    startingRegion.center = startingLocation;
+    startingRegion.span.latitudeDelta = 0.02; //fit this range into the map,reduce scope
+    startingRegion.span.longitudeDelta = 0.02;
+    
+    [self.mapView setRegion:startingRegion];
+    
+//    MKAnnotationView *marker = [[MKPointAnnotation alloc] init];
+//    CLLocationCoordinate2D cityHallLocation;
+//    cityHallLocation.longitude = 49.2607834;
+//    cityHallLocation.longitude = -123.1151686;
+//    
+//    marker.coordinate = cityHallLocation;
+//    marker.title = @"Vancouver City Hall";
+//    
+//    [self.mapView addAnnotation: marker];
+    
     // Do any additional setup after loading the view.
+}
+
+-(MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
+    //like cellforpath it only runs when it's visible
+    
+    static NSString* annotationIdentifier = @"cityHallAnnotation";
+    
+    
+    return nil;
+    
 }
 
 - (void)didReceiveMemoryWarning {

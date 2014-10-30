@@ -17,6 +17,7 @@
 		992A14331A00EB0700606F97 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14321A00EB0700606F97 /* Movie.m */; };
 		993D0EFB1A0231CA00D42FAF /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 993D0EFA1A0231CA00D42FAF /* map.png */; };
 		993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0EFD1A0232B000D42FAF /* MapViewController.m */; };
+		993D0F041A02A98300D42FAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D0F031A02A98300D42FAF /* MapKit.framework */; };
 		993F87491A019F090086AA04 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87481A019F090086AA04 /* MovieCell.m */; };
 		993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874B1A01A3630086AA04 /* MyCollectionViewController.m */; };
 		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
@@ -54,6 +55,7 @@
 		993D0EFA1A0231CA00D42FAF /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		993D0EFC1A0232B000D42FAF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		993D0EFD1A0232B000D42FAF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		993D0F031A02A98300D42FAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		993F87471A019F090086AA04 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		993F87481A019F090086AA04 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		993F874A1A01A3630086AA04 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993D0F041A02A98300D42FAF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 		992A13FB1A00E3D400606F97 = {
 			isa = PBXGroup;
 			children = (
+				993D0F031A02A98300D42FAF /* MapKit.framework */,
 				992A14061A00E3D400606F97 /* RottenMangoes */,
 				992A14201A00E3D400606F97 /* RottenMangoesTests */,
 				992A14051A00E3D400606F97 /* Products */,
@@ -105,25 +109,13 @@
 		992A14061A00E3D400606F97 /* RottenMangoes */ = {
 			isa = PBXGroup;
 			children = (
-				993D0EFA1A0231CA00D42FAF /* map.png */,
+				992A14111A00E3D400606F97 /* Main.storyboard */,
 				992A140B1A00E3D400606F97 /* AppDelegate.h */,
 				992A140C1A00E3D400606F97 /* AppDelegate.m */,
-				993F874A1A01A3630086AA04 /* MyCollectionViewController.h */,
-				993F874B1A01A3630086AA04 /* MyCollectionViewController.m */,
-				993F874D1A01B0AE0086AA04 /* MyTableViewController.h */,
-				993F874E1A01B0AE0086AA04 /* MyTableViewController.m */,
-				993D0EFC1A0232B000D42FAF /* MapViewController.h */,
-				993D0EFD1A0232B000D42FAF /* MapViewController.m */,
-				992A142E1A00EAAE00606F97 /* MovieBuilder.h */,
-				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
-				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
-				993F87541A01CA820086AA04 /* ReviewsBuilder.m */,
-				992A14311A00EB0700606F97 /* Movie.h */,
-				992A14321A00EB0700606F97 /* Movie.m */,
-				993F87501A01BFE60086AA04 /* Reviews.h */,
-				993F87511A01BFE60086AA04 /* Reviews.m */,
-				992A14111A00E3D400606F97 /* Main.storyboard */,
+				993D0EFF1A02350200D42FAF /* ViewControllers */,
+				993D0F001A02351200D42FAF /* Objects */,
 				992A14141A00E3D400606F97 /* Images.xcassets */,
+				993D0F021A02354C00D42FAF /* Project Images */,
 				992A14161A00E3D400606F97 /* LaunchScreen.xib */,
 				992A14071A00E3D400606F97 /* Supporting Files */,
 				992A142D1A00E67500606F97 /* MoviesDelegate.h */,
@@ -157,6 +149,50 @@
 				992A14221A00E3D400606F97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		993D0EFF1A02350200D42FAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				993F874A1A01A3630086AA04 /* MyCollectionViewController.h */,
+				993F874B1A01A3630086AA04 /* MyCollectionViewController.m */,
+				993F874D1A01B0AE0086AA04 /* MyTableViewController.h */,
+				993F874E1A01B0AE0086AA04 /* MyTableViewController.m */,
+				993D0EFC1A0232B000D42FAF /* MapViewController.h */,
+				993D0EFD1A0232B000D42FAF /* MapViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		993D0F001A02351200D42FAF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				992A14311A00EB0700606F97 /* Movie.h */,
+				992A14321A00EB0700606F97 /* Movie.m */,
+				993F87501A01BFE60086AA04 /* Reviews.h */,
+				993F87511A01BFE60086AA04 /* Reviews.m */,
+				993D0F011A02352800D42FAF /* JSON Helpers */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		993D0F011A02352800D42FAF /* JSON Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				992A142E1A00EAAE00606F97 /* MovieBuilder.h */,
+				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
+				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
+				993F87541A01CA820086AA04 /* ReviewsBuilder.m */,
+			);
+			name = "JSON Helpers";
+			sourceTree = "<group>";
+		};
+		993D0F021A02354C00D42FAF /* Project Images */ = {
+			isa = PBXGroup;
+			children = (
+				993D0EFA1A0231CA00D42FAF /* map.png */,
+			);
+			name = "Project Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

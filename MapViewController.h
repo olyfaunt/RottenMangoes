@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate, MKAnnotation>
+
 
 - (IBAction)goBack:(id)sender;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

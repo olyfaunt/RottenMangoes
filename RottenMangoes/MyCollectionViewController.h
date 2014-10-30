@@ -19,6 +19,4 @@
 @property (nonatomic, strong) NSMutableArray *movies;
 @property (nonatomic, strong) NSMutableArray *reviewsArray;
 
-//- (IBAction)clickedButton:(id)sender;
-
 @end
