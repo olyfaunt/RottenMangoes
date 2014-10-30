@@ -10,6 +10,8 @@
 
 @implementation Theatre
 
+@synthesize coordinate;
+
 - (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary {
     
     if (self = [self init]) {

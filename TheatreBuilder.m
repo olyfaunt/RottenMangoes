@@ -10,7 +10,7 @@
 
 @implementation TheatreBuilder
 
--(void)getTheatresFromGoogle:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion {
+-(void)getTheatres:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion {
     
     self.theatresArray = [NSMutableArray array];
     

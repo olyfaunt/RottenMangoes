@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSMutableArray *theatresArray;
 
--(void)getTheatresFromGoogle:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion;
+-(void)getTheatres:(NSURL*)url withCompletion: (void (^)(NSMutableArray *theatres))completion;
 
 @end

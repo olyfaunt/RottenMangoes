@@ -41,8 +41,6 @@
     
     self.theatresArray = [NSMutableArray array];
     
-    //for each theatre in theatresArray, make MKPointAnnotation *marker and alloc/init, set location.lat & long
-    
 }
 
 -(MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)_annotation {
@@ -127,7 +125,7 @@
             
             TheatreBuilder *theatreBuilder = [[TheatreBuilder alloc] init];
             
-            [theatreBuilder getTheatresFromGoogle:url withCompletion:^(NSMutableArray *theatres) {
+            [theatreBuilder getTheatres:url withCompletion:^(NSMutableArray *theatres) {
             
                 [self.theatresArray addObjectsFromArray:theatres];
                 NSLog(@"theatres: %@", theatres);
@@ -148,16 +146,6 @@
         }
     }];
 }
-
-
--(void) mapViewDidFinishLoadingMap:(MKMapView *)mapView {
-    
-    // Do any additional setup after loading the view.
-    
-    NSLog(@"printing theatresArray in didFinishLoadingMap: %@", self.theatresArray);
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
