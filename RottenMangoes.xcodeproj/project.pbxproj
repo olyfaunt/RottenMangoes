@@ -15,6 +15,8 @@
 		992A14241A00E3D400606F97 /* RottenMangoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14231A00E3D400606F97 /* RottenMangoesTests.m */; };
 		992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A142F1A00EAAE00606F97 /* MovieBuilder.m */; };
 		992A14331A00EB0700606F97 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14321A00EB0700606F97 /* Movie.m */; };
+		993D0EFB1A0231CA00D42FAF /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 993D0EFA1A0231CA00D42FAF /* map.png */; };
+		993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0EFD1A0232B000D42FAF /* MapViewController.m */; };
 		993F87491A019F090086AA04 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87481A019F090086AA04 /* MovieCell.m */; };
 		993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874B1A01A3630086AA04 /* MyCollectionViewController.m */; };
 		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
@@ -49,6 +51,9 @@
 		992A142F1A00EAAE00606F97 /* MovieBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieBuilder.m; sourceTree = "<group>"; };
 		992A14311A00EB0700606F97 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		992A14321A00EB0700606F97 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		993D0EFA1A0231CA00D42FAF /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		993D0EFC1A0232B000D42FAF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		993D0EFD1A0232B000D42FAF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		993F87471A019F090086AA04 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		993F87481A019F090086AA04 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		993F874A1A01A3630086AA04 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
@@ -100,12 +105,15 @@
 		992A14061A00E3D400606F97 /* RottenMangoes */ = {
 			isa = PBXGroup;
 			children = (
+				993D0EFA1A0231CA00D42FAF /* map.png */,
 				992A140B1A00E3D400606F97 /* AppDelegate.h */,
 				992A140C1A00E3D400606F97 /* AppDelegate.m */,
 				993F874A1A01A3630086AA04 /* MyCollectionViewController.h */,
 				993F874B1A01A3630086AA04 /* MyCollectionViewController.m */,
 				993F874D1A01B0AE0086AA04 /* MyTableViewController.h */,
 				993F874E1A01B0AE0086AA04 /* MyTableViewController.m */,
+				993D0EFC1A0232B000D42FAF /* MapViewController.h */,
+				993D0EFD1A0232B000D42FAF /* MapViewController.m */,
 				992A142E1A00EAAE00606F97 /* MovieBuilder.h */,
 				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
 				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
@@ -234,6 +242,7 @@
 				992A14131A00E3D400606F97 /* Main.storyboard in Resources */,
 				992A14181A00E3D400606F97 /* LaunchScreen.xib in Resources */,
 				992A14151A00E3D400606F97 /* Images.xcassets in Resources */,
+				993D0EFB1A0231CA00D42FAF /* map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 				992A14331A00EB0700606F97 /* Movie.m in Sources */,
 				993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */,
 				993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */,
+				993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */,
 				992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */,
 				992A140A1A00E3D400606F97 /* main.m in Sources */,
 			);

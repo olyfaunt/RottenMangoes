@@ -87,31 +87,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k23-Oh-t8i">
-                                                    <rect key="frame" x="17" y="51" width="98" height="21"/>
+                                                    <rect key="frame" x="17" y="50" width="98" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-Xl-Cq3">
-                                                    <rect key="frame" x="50" y="8" width="520" height="21"/>
+                                                    <rect key="frame" x="50" y="8" width="248" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="yearLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDp-6m-Brp">
-                                                    <rect key="frame" x="180" y="29" width="98" height="21"/>
+                                                    <rect key="frame" x="178" y="29" width="98" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="releaseDateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zi-bU-gZ6">
+                                                    <rect key="frame" x="103" y="50" width="189" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ratingLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCZ-u7-a83">
                                                     <rect key="frame" x="64" y="29" width="72" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="releaseDateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zi-bU-gZ6">
-                                                    <rect key="frame" x="103" y="51" width="189" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -156,7 +156,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="movieReviews" translatesAutoresizingMaskIntoConstraints="NO" id="P8W-hO-S4w">
-                                                    <rect key="frame" x="15" y="27" width="250" height="50"/>
+                                                    <rect key="frame" x="15" y="27" width="275" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -172,6 +172,20 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IGe-3g-x9c" id="IYC-vI-ePV">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-9e-9vW">
+                                                    <rect key="frame" x="21" y="14" width="100" height="100"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="32" maxY="80"/>
+                                                    <state key="normal" title="Theater Map" backgroundImage="map.png">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="LwL-uV-R45" kind="presentation" id="UFl-8f-zFk"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -183,7 +197,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Movie Details" id="ljU-gY-3IK">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="eoC-ZX-vSc">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="eoC-ZX-vSc">
+                            <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goBack:" destination="Rqd-2N-6O8" id="XSl-kn-RyM"/>
                             </connections>
@@ -203,10 +218,35 @@
             </objects>
             <point key="canvasLocation" x="2052" y="-58"/>
         </scene>
+        <!--Map View-->
+        <scene sceneID="OoN-SF-kVf">
+            <objects>
+                <viewController id="SOd-G7-SL1" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tZ8-Qc-hGS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vz9-di-9f4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJe-EM-QKD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map View" id="4Pi-Ea-TgB">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="MH7-rd-sKf">
+                            <color key="tintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="goBack:" destination="SOd-G7-SL1" id="UCu-EE-ofB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTa-fG-ygG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3529" y="-65"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sdx-io-bkj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bLH-9C-uun" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fpS-MN-Y9w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Moz-5k-1lZ">
@@ -218,6 +258,7 @@
                         <segue destination="Rqd-2N-6O8" kind="relationship" relationship="rootViewController" id="PLR-0v-2SB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLH-9C-uun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1404" y="-58"/>
         </scene>
@@ -239,5 +280,26 @@
             </objects>
             <point key="canvasLocation" x="31" y="-58"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DPN-7W-xZq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwL-uV-R45" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dqy-rv-YLh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SOd-G7-SL1" kind="relationship" relationship="rootViewController" id="Yvt-sq-dbO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fwx-Bw-LP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2849" y="-65"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="map.png" width="512" height="512"/>
+    </resources>
 </document>
