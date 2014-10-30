@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MoviesDelegate.h
 //  RottenMangoes
 //
 //  Created by Audrey Jun on 2014-10-29.
 //  Copyright (c) 2014 audreyjun. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
-
+@protocol MoviesDelegate <NSObject>
 
 @end
-

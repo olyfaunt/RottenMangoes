@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		992A140A1A00E3D400606F97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14091A00E3D400606F97 /* main.m */; };
 		992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A140C1A00E3D400606F97 /* AppDelegate.m */; };
-		992A14101A00E3D400606F97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A140F1A00E3D400606F97 /* ViewController.m */; };
 		992A14131A00E3D400606F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992A14111A00E3D400606F97 /* Main.storyboard */; };
 		992A14151A00E3D400606F97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992A14141A00E3D400606F97 /* Images.xcassets */; };
 		992A14181A00E3D400606F97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992A14161A00E3D400606F97 /* LaunchScreen.xib */; };
 		992A14241A00E3D400606F97 /* RottenMangoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14231A00E3D400606F97 /* RottenMangoesTests.m */; };
+		992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A142F1A00EAAE00606F97 /* MovieBuilder.m */; };
+		992A14331A00EB0700606F97 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14321A00EB0700606F97 /* Movie.m */; };
+		993F87491A019F090086AA04 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87481A019F090086AA04 /* MovieCell.m */; };
+		993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874B1A01A3630086AA04 /* MyCollectionViewController.m */; };
+		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
+		993F87521A01BFE60086AA04 /* Reviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87511A01BFE60086AA04 /* Reviews.m */; };
+		993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87541A01CA820086AA04 /* ReviewsBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +38,27 @@
 		992A14091A00E3D400606F97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		992A140B1A00E3D400606F97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		992A140C1A00E3D400606F97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		992A140E1A00E3D400606F97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		992A140F1A00E3D400606F97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		992A14121A00E3D400606F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		992A14141A00E3D400606F97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		992A14171A00E3D400606F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		992A141D1A00E3D400606F97 /* RottenMangoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenMangoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		992A14221A00E3D400606F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992A14231A00E3D400606F97 /* RottenMangoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenMangoesTests.m; sourceTree = "<group>"; };
+		992A142D1A00E67500606F97 /* MoviesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesDelegate.h; sourceTree = "<group>"; };
+		992A142E1A00EAAE00606F97 /* MovieBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieBuilder.h; sourceTree = "<group>"; };
+		992A142F1A00EAAE00606F97 /* MovieBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieBuilder.m; sourceTree = "<group>"; };
+		992A14311A00EB0700606F97 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		992A14321A00EB0700606F97 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		993F87471A019F090086AA04 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		993F87481A019F090086AA04 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		993F874A1A01A3630086AA04 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
+		993F874B1A01A3630086AA04 /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
+		993F874D1A01B0AE0086AA04 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		993F874E1A01B0AE0086AA04 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		993F87501A01BFE60086AA04 /* Reviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reviews.h; sourceTree = "<group>"; };
+		993F87511A01BFE60086AA04 /* Reviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reviews.m; sourceTree = "<group>"; };
+		993F87531A01CA820086AA04 /* ReviewsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsBuilder.h; path = ../ReviewsBuilder.h; sourceTree = "<group>"; };
+		993F87541A01CA820086AA04 /* ReviewsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsBuilder.m; path = ../ReviewsBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +102,25 @@
 			children = (
 				992A140B1A00E3D400606F97 /* AppDelegate.h */,
 				992A140C1A00E3D400606F97 /* AppDelegate.m */,
-				992A140E1A00E3D400606F97 /* ViewController.h */,
-				992A140F1A00E3D400606F97 /* ViewController.m */,
+				993F874A1A01A3630086AA04 /* MyCollectionViewController.h */,
+				993F874B1A01A3630086AA04 /* MyCollectionViewController.m */,
+				993F874D1A01B0AE0086AA04 /* MyTableViewController.h */,
+				993F874E1A01B0AE0086AA04 /* MyTableViewController.m */,
+				992A142E1A00EAAE00606F97 /* MovieBuilder.h */,
+				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
+				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
+				993F87541A01CA820086AA04 /* ReviewsBuilder.m */,
+				992A14311A00EB0700606F97 /* Movie.h */,
+				992A14321A00EB0700606F97 /* Movie.m */,
+				993F87501A01BFE60086AA04 /* Reviews.h */,
+				993F87511A01BFE60086AA04 /* Reviews.m */,
 				992A14111A00E3D400606F97 /* Main.storyboard */,
 				992A14141A00E3D400606F97 /* Images.xcassets */,
 				992A14161A00E3D400606F97 /* LaunchScreen.xib */,
 				992A14071A00E3D400606F97 /* Supporting Files */,
+				992A142D1A00E67500606F97 /* MoviesDelegate.h */,
+				993F87471A019F090086AA04 /* MovieCell.h */,
+				993F87481A019F090086AA04 /* MovieCell.m */,
 			);
 			path = RottenMangoes;
 			sourceTree = "<group>";
@@ -219,7 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992A14101A00E3D400606F97 /* ViewController.m in Sources */,
+				992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */,
+				993F87521A01BFE60086AA04 /* Reviews.m in Sources */,
+				993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */,
+				993F87491A019F090086AA04 /* MovieCell.m in Sources */,
+				992A14331A00EB0700606F97 /* Movie.m in Sources */,
+				993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */,
+				993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */,
 				992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */,
 				992A140A1A00E3D400606F97 /* main.m in Sources */,
 			);
@@ -412,6 +450,7 @@
 				992A14291A00E3D400606F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992A142A1A00E3D400606F97 /* Build configuration list for PBXNativeTarget "RottenMangoesTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +459,7 @@
 				992A142C1A00E3D400606F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
