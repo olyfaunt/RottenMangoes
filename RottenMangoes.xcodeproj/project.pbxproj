@@ -30,6 +30,9 @@
 		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
 		993F87521A01BFE60086AA04 /* Reviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87511A01BFE60086AA04 /* Reviews.m */; };
 		993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87541A01CA820086AA04 /* ReviewsBuilder.m */; };
+		999909781A033C9600D539EA /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 999909771A033C9600D539EA /* CustomAnnotation.m */; };
+		9999097A1A03405700D539EA /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 999909791A03405700D539EA /* pin.png */; };
+		9999097C1A0344D000D539EA /* pin_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9999097B1A0344D000D539EA /* pin_blue.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,10 @@
 		993F87511A01BFE60086AA04 /* Reviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reviews.m; sourceTree = "<group>"; };
 		993F87531A01CA820086AA04 /* ReviewsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsBuilder.h; path = ../ReviewsBuilder.h; sourceTree = "<group>"; };
 		993F87541A01CA820086AA04 /* ReviewsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsBuilder.m; path = ../ReviewsBuilder.m; sourceTree = "<group>"; };
+		999909761A033C9600D539EA /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotation.h; path = ../CustomAnnotation.h; sourceTree = "<group>"; };
+		999909771A033C9600D539EA /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotation.m; path = ../CustomAnnotation.m; sourceTree = "<group>"; };
+		999909791A03405700D539EA /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		9999097B1A0344D000D539EA /* pin_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_blue.png; sourceTree = "<group>"; };
 		D5C5D254AE66690CCBDA223D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +158,6 @@
 				993D0EFF1A02350200D42FAF /* ViewControllers */,
 				993D0F001A02351200D42FAF /* Objects */,
 				992A14141A00E3D400606F97 /* Images.xcassets */,
-				993D0F021A02354C00D42FAF /* Project Images */,
 				992A14161A00E3D400606F97 /* LaunchScreen.xib */,
 				992A14071A00E3D400606F97 /* Supporting Files */,
 				993F87471A019F090086AA04 /* MovieCell.h */,
@@ -208,6 +214,9 @@
 				993F87511A01BFE60086AA04 /* Reviews.m */,
 				993D0F051A02B0F200D42FAF /* Theatre.h */,
 				993D0F061A02B0F200D42FAF /* Theatre.m */,
+				999909761A033C9600D539EA /* CustomAnnotation.h */,
+				999909771A033C9600D539EA /* CustomAnnotation.m */,
+				993D0F021A02354C00D42FAF /* Project Images */,
 				993D0F011A02352800D42FAF /* JSON Helpers */,
 			);
 			name = Objects;
@@ -229,6 +238,8 @@
 		993D0F021A02354C00D42FAF /* Project Images */ = {
 			isa = PBXGroup;
 			children = (
+				999909791A03405700D539EA /* pin.png */,
+				9999097B1A0344D000D539EA /* pin_blue.png */,
 				993D0EFA1A0231CA00D42FAF /* map.png */,
 			);
 			name = "Project Images";
@@ -326,9 +337,11 @@
 			files = (
 				992A14131A00E3D400606F97 /* Main.storyboard in Resources */,
 				992A14181A00E3D400606F97 /* LaunchScreen.xib in Resources */,
+				9999097C1A0344D000D539EA /* pin_blue.png in Resources */,
 				9916C1371A02D52000389937 /* vancouver.gpx in Resources */,
 				992A14151A00E3D400606F97 /* Images.xcassets in Resources */,
 				993D0EFB1A0231CA00D42FAF /* map.png in Resources */,
+				9999097A1A03405700D539EA /* pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +404,7 @@
 				993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */,
 				992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */,
 				992A140A1A00E3D400606F97 /* main.m in Sources */,
+				999909781A033C9600D539EA /* CustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

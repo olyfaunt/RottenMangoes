@@ -16,6 +16,7 @@
 #import "Theatre.h"
 #import "TheatreBuilder.h"
 #import "Movie.h"
+#import "CustomAnnotation.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 

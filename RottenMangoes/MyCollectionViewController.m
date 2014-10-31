@@ -36,9 +36,6 @@ static NSString *const kIdentifier = @"MovieCell";
         });
         
     }];
-
-    
-    
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -70,7 +67,6 @@ static NSString *const kIdentifier = @"MovieCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.movies count];
 }
@@ -79,6 +75,7 @@ static NSString *const kIdentifier = @"MovieCell";
     MovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    
     Movie *movie = [self.movies objectAtIndex:indexPath.item];
     cell.movieLabel.text = movie.title;
     [cell.moviePoster sd_setImageWithURL:[NSURL URLWithString:movie.posterPic]];
@@ -98,37 +95,9 @@ static NSString *const kIdentifier = @"MovieCell";
         MyTableViewController *tableViewController = (MyTableViewController *)[navigationController topViewController];
         tableViewController.movie = [self.movies objectAtIndex:indexPath.item];
         
-        
-//        //
-//        Movie *aMovie = [self.movies objectAtIndex:indexPath.item];
-//        NSString *urlNumber = aMovie.idNumber;
-//        
-//        NSString *first=@"http://api.rottentomatoes.com/api/public/v1.0/movies/";
-//        NSString *second=urlNumber;
-//        NSString *third=@"/reviews.json?apikey=c9zzxwtuc3q2tftqata3k59w&page_limit=3";
-//        
-//        NSArray *myStrings = [[NSArray alloc] initWithObjects:first, second, third, nil];
-//        NSString *joinedString = [myStrings componentsJoinedByString:@""];
-//        
-//        NSString *dataUrl = joinedString;
-//        NSURL *url = [NSURL URLWithString:dataUrl];
-//        
-//        ReviewsBuilder *reviewsBuilder = [[ReviewsBuilder alloc] init];
-//        
-//        [reviewsBuilder getReviewsFromRottenMangoes:url withCompletion:^(NSMutableArray *reviews) {
-//            [self.reviewsArray addObjectsFromArray:reviews];
-//            NSLog(@"self.reviewsArray: %@", self.reviewsArray);
-//            //        dispatch_async(dispatch_get_main_queue(), ^{
-//            //            // Update the UI
-//            //            [self.collectionView reloadData];
-//            //        });
-//            
-//        }];
-//        
-//        //
-//        tableViewController.reviewsArray = self.reviewsArray;
     }
 }
+
 
 #pragma mark <UICollectionViewDelegate>
 

@@ -16,7 +16,7 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 
-@interface MyCollectionViewController : UICollectionViewController
+@interface MyCollectionViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSMutableArray *movies;
 @property (nonatomic, strong) NSMutableArray *reviewsArray;

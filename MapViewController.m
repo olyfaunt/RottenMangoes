@@ -47,13 +47,15 @@
     
     //like cellforpath it only runs when it's visible
     
+//    MKPinAnnotationView *MyPin=[[MKPinAnnotationView alloc] initWithAnnotation:_annotation reuseIdentifier:@"current"]; //new
+    
     if (_annotation == self.mapView.userLocation){
         return nil; //default to blue dot
     }
     
     static NSString* annotationIdentifier = @"cityHallAnnotation";
     
-    MKAnnotationView* pinView = (MKAnnotationView *)
+    MKPinAnnotationView* pinView = (MKPinAnnotationView *)
     [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
     
     if (!pinView) {
@@ -61,8 +63,9 @@
         pinView = [[MKPinAnnotationView alloc]
                    initWithAnnotation:_annotation reuseIdentifier:annotationIdentifier];
     }
-    pinView.tintColor = [UIColor greenColor];
+    pinView.pinColor = MKPinAnnotationColorPurple;
     pinView.canShowCallout = YES;
+    pinView.image = [UIImage imageNamed:@"pin_blue.png"];
     //pinView.calloutOffset = CGPointMake(-7, 0);
     //pinView.draggable = false;
     return pinView;
@@ -134,12 +137,14 @@
                 NSLog(@"self.theatresArray: %@", self.theatresArray);
                 
                 for (Theatre* currentTheatre in self.theatresArray) {
-                    MKPointAnnotation *marker = [[MKPointAnnotation alloc] init];
+                    
+                    CustomAnnotation *marker = [[CustomAnnotation alloc] init];
                     CLLocationCoordinate2D theatreLocation;
                     theatreLocation.latitude = [currentTheatre.latitude doubleValue];
                     theatreLocation.longitude = [currentTheatre.longitude doubleValue];
                     marker.coordinate = theatreLocation;
                     marker.title = currentTheatre.name;
+                    marker.subtitle = currentTheatre.address;
                     [self.mapView addAnnotation:marker];
                 }
                 

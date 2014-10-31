@@ -19,13 +19,12 @@
     
     self.reviewsArray = [NSMutableArray array];
     
-    self.titleLabel.text = self.movie.title;
-    self.yearLabel.text = [self.movie.year stringValue];
-    self.ratingLabel.text = self.movie.rating;
-    self.releaseDateLabel.text = self.movie.theaterReleaseDate;
-    self.synopsisTextView.text = self.movie.synopsis;
+    self.titleLabel.text = (self.movie.title.length) ? self.movie.title : @"No title available"; // if not nil, do 1, else do 2.
+    self.yearLabel.text = (self.movie.year) ? [self.movie.year stringValue] : @"N/A";
+    self.ratingLabel.text = (self.movie.rating.length) ? self.movie.rating : @"N/A";
+    self.releaseDateLabel.text = (self.movie.theaterReleaseDate) ? self.movie.theaterReleaseDate : @"N/A";
+    self.synopsisTextView.text = (self.movie.synopsis.length) ? self.movie.synopsis : @"No synopsis available.";
 
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,20 +48,28 @@
         [self.reviewsArray addObjectsFromArray:reviews];
         NSLog(@"self.reviewsArray: %@", self.reviewsArray);
         NSLog(@"reviews: %@", reviews);
+        
+        ////////HOW TO MULTITHREAD: create new queue..
+//        dispatch_queue_t queue = dispatch_queue_create("new_queue", NULL);
+//        
+//        dispatch_async(queue, ^{
+//            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://google.com"]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                // Show data in UI here
+//                completion();
+//            });
+//        });
+
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    // Update the UI
-                    
-                    if (self.reviewsArray !=nil) {
-                    
+                    if (self.reviewsArray&&self.reviewsArray.count) {
                     Reviews *reviewOne = self.reviewsArray[0];
                     self.criticLabel.text = reviewOne.critic;
                     self.reviewsTextView.text = reviewOne.quote;
+                    } else {
+                        self.reviewsTextView.text = @"No review available.";
                     }
-                    
                 });
-        
-    }];
-    
+        }];
 }
 
 
