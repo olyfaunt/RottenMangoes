@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 @interface MovieCell : UICollectionViewCell <UIGestureRecognizerDelegate>
 
 @property(nonatomic, strong) IBOutlet UILabel *movieLabel;

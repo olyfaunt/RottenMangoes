@@ -7,6 +7,7 @@
 //
 
 #import "TheatreBuilder.h"
+#import "TheatreMO+Management.h"
 
 @implementation TheatreBuilder
 
@@ -29,10 +30,13 @@
         // Get an array of dictionaries with the key "theatres"
         NSArray *dictsArray = [jsonDictionary valueForKey:@"theatres"];
         
+        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+        NSManagedObjectContext *MOC = [coreDataStack managedObjectContext];
+
         // Iterate through the array of dictionaries
         for(id currentTheatre in dictsArray) {
             // Create a new Movie object for each one and initialise it with information in the dictionary
-            TheatreMO *theatre = [[TheatreMO alloc] initWithJSONDictionary:currentTheatre];
+            TheatreMO *theatre = [TheatreMO itemWithJSONDictionary:currentTheatre inManagedObjectContext:MOC];
             [self.theatresArray addObject:theatre];
         }
         

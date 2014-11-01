@@ -36,6 +36,8 @@
 		9999098B1A0419FB00D539EA /* TheatreMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999098A1A0419FB00D539EA /* TheatreMO.m */; };
 		9999098E1A0419FB00D539EA /* ShowtimeMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999098D1A0419FB00D539EA /* ShowtimeMO.m */; };
 		999909911A0419FB00D539EA /* MovieMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 999909901A0419FB00D539EA /* MovieMO.m */; };
+		99F11C3E1A058115001F09CC /* MovieMO+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F11C3D1A058115001F09CC /* MovieMO+Management.m */; };
+		99F11C411A058289001F09CC /* TheatreMO+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F11C401A058289001F09CC /* TheatreMO+Management.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		9999098D1A0419FB00D539EA /* ShowtimeMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowtimeMO.m; sourceTree = "<group>"; };
 		9999098F1A0419FB00D539EA /* MovieMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieMO.h; sourceTree = "<group>"; };
 		999909901A0419FB00D539EA /* MovieMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieMO.m; sourceTree = "<group>"; };
+		99F11C3C1A058115001F09CC /* MovieMO+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MovieMO+Management.h"; sourceTree = "<group>"; };
+		99F11C3D1A058115001F09CC /* MovieMO+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MovieMO+Management.m"; sourceTree = "<group>"; };
+		99F11C3F1A058289001F09CC /* TheatreMO+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TheatreMO+Management.h"; sourceTree = "<group>"; };
+		99F11C401A058289001F09CC /* TheatreMO+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TheatreMO+Management.m"; sourceTree = "<group>"; };
 		D5C5D254AE66690CCBDA223D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,10 +256,14 @@
 				999909861A040D2200D539EA /* RottenMangoes.xcdatamodeld */,
 				9999098F1A0419FB00D539EA /* MovieMO.h */,
 				999909901A0419FB00D539EA /* MovieMO.m */,
+				99F11C3C1A058115001F09CC /* MovieMO+Management.h */,
+				99F11C3D1A058115001F09CC /* MovieMO+Management.m */,
 				9999098C1A0419FB00D539EA /* ShowtimeMO.h */,
 				9999098D1A0419FB00D539EA /* ShowtimeMO.m */,
 				999909891A0419FB00D539EA /* TheatreMO.h */,
 				9999098A1A0419FB00D539EA /* TheatreMO.m */,
+				99F11C3F1A058289001F09CC /* TheatreMO+Management.h */,
+				99F11C401A058289001F09CC /* TheatreMO+Management.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -413,7 +423,9 @@
 			files = (
 				999909911A0419FB00D539EA /* MovieMO.m in Sources */,
 				992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */,
+				99F11C411A058289001F09CC /* TheatreMO+Management.m in Sources */,
 				999909881A040D2200D539EA /* RottenMangoes.xcdatamodeld in Sources */,
+				99F11C3E1A058115001F09CC /* MovieMO+Management.m in Sources */,
 				9916C1351A02CC5800389937 /* TheatreBuilder.m in Sources */,
 				993F87491A019F090086AA04 /* MovieCell.m in Sources */,
 				993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */,

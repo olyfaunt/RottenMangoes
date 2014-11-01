@@ -27,6 +27,6 @@
 - (void)addShowtime:(NSSet *)values;
 - (void)removeShowtime:(NSSet *)values;
 
-- (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary;
+//- (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary;
 
 @end

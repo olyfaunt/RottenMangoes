@@ -9,6 +9,7 @@
 #import "MovieBuilder.h"
 #import "Movie.h"
 #import "MovieMO.h"
+#import "MovieMO+Management.h"
 
 @implementation MovieBuilder
 
@@ -30,15 +31,18 @@
         // Get an array of dictionaries with the key "movies"
         NSArray *dictsArray = [jsonDictionary valueForKey:@"movies"];
         
+        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+        NSManagedObjectContext *MOC = [coreDataStack managedObjectContext];
+        
         // Iterate through the array of dictionaries
         for(id currentMovie in dictsArray) {
             // Create a new Movie object for each one and initialise it with information in the dictionary
-            MovieMO *movie = [[MovieMO alloc] initWithJSONDictionary:currentMovie];
+            MovieMO *movie = [MovieMO itemWithJSONDictionary:currentMovie inManagedObjectContext:MOC];
             [self.moviesArray addObject:movie];
         }
         
-        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-        [coreDataStack saveContext];
+//        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+//        [coreDataStack saveContext];
         
         completion(self.moviesArray);
         

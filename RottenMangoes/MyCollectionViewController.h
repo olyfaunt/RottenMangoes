@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieBuilder.h"
-#import "Movie.h"
 #import "MovieCell.h"
 #import "MyTableViewController.h"
-#import "Reviews.h"
-#import "ReviewsBuilder.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 #import "CoreDataStack.h"
@@ -28,6 +25,7 @@
 
 @property (nonatomic, strong) NSMutableArray *reviewsArray;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) CoreDataStack *coreDataStack;
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TheatreMO.h"
+#import "CoreDataStack.h"
 
 @interface TheatreBuilder : NSObject
 

@@ -24,13 +24,15 @@ static NSString *const kIdentifier = @"MovieCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.coreDataStack = [CoreDataStack defaultStack];
+    self.managedObjectContext = [self.coreDataStack managedObjectContext];
+    
     self.movies = [NSMutableArray array];
-    self.movies = [[self moviesInDatabase] mutableCopy]; //all movies currently in database, FETCHED
+//        self.movies = [[self moviesInDatabase] mutableCopy]; //all movies currently in database, FETCHED - but fetch error if empty
     
     //if there we already have an array of movies
     if (self.movies !=nil) {
-        
-        self.movies = [NSMutableArray array];
+
         self.updatedMovies = [NSMutableArray array];
         
         //get updatedMovies array
@@ -107,16 +109,16 @@ static NSString *const kIdentifier = @"MovieCell";
 
 -(void) compareMovies {
     //for each movie in self.movies database, if {[find in self.updatedMovies]=nil - don't find, delete movie} else {nothing} // compare movieID instead (jsonDictionaries vs movie objects)
-    
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    
+//    
+//    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+//    
     for (id currentMovie in self.movies) {
     
         NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray: self.updatedMovies];
         
         if ([countedSet countForObject:currentMovie]==0) {
-            [[coreDataStack managedObjectContext] deleteObject:currentMovie];
-            [coreDataStack saveContext];
+            [self.managedObjectContext deleteObject:currentMovie];
+            [self.coreDataStack saveContext];
             break;
         } else {
             break;
@@ -127,21 +129,22 @@ static NSString *const kIdentifier = @"MovieCell";
     //filtered array with predicate
     
     for (id currentUpdatedMovie in self.updatedMovies) {
+        
         NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray: self.movies];
         
         if ([countedSet countForObject:currentUpdatedMovie]==0) {
             
             //create new NSManagedObject, insert it into MOC, and set its attributes, save MOC
-            MovieMO *movie = [NSEntityDescription insertNewObjectForEntityForName:@"MovieMO" inManagedObjectContext:coreDataStack.managedObjectContext];
+            MovieMO *movie = [NSEntityDescription insertNewObjectForEntityForName:@"MovieMO" inManagedObjectContext:self.managedObjectContext];
             movie.title = [currentUpdatedMovie objectForKey:@"title"];
-            movie.year = [currentUpdatedMovie objectForKey:@"year"];
+            movie.year = [[currentUpdatedMovie objectForKey:@"year"] stringValue];
             movie.idNumber = [currentUpdatedMovie objectForKey:@"id"];
             movie.rating = [currentUpdatedMovie objectForKey:@"rating"];
             movie.theaterReleaseDate = [[currentUpdatedMovie objectForKey:@"release_dates"] objectForKey:@"theater"];
             movie.synopsis = [currentUpdatedMovie objectForKey:@"synopsis"];
             movie.posterPic = [[currentUpdatedMovie objectForKey:@"posters"] objectForKey:@"thumbnail"];
             
-            [coreDataStack saveContext];
+            [self.coreDataStack saveContext];
             break;
         } else {
             break;
@@ -180,7 +183,7 @@ static NSString *const kIdentifier = @"MovieCell";
     
     // Configure the cell
     
-    Movie *movie = [self.movies objectAtIndex:indexPath.item];
+    MovieMO *movie = [self.movies objectAtIndex:indexPath.item];
     cell.movieLabel.text = movie.title;
     [cell.moviePoster sd_setImageWithURL:[NSURL URLWithString:movie.posterPic]];
     
@@ -198,6 +201,7 @@ static NSString *const kIdentifier = @"MovieCell";
         UINavigationController *navigationController = segue.destinationViewController;
         MyTableViewController *tableViewController = (MyTableViewController *)[navigationController topViewController];
         tableViewController.movie = [self.movies objectAtIndex:indexPath.item];
+        tableViewController.managedObjectContext = self.managedObjectContext;
         
     }
 }

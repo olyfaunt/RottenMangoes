@@ -18,24 +18,19 @@
 @dynamic longitude;
 @dynamic showtime;
 
-- (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary {
-    
-    if (self = [self init]) {
-        self.name = [jsonDictionary objectForKey:@"name"];
-        self.address = [jsonDictionary objectForKey:@"address"];
-        self.idNumber = [jsonDictionary objectForKey:@"id"];
-        self.latitude = [jsonDictionary objectForKey:@"lat"];
-        NSDictionary *releaseDictionary = [jsonDictionary objectForKey:@"release_dates"];
-        self.theaterReleaseDate = [releaseDictionary objectForKey:@"theater"];
-        self.synopsis = [jsonDictionary objectForKey:@"synopsis"];
-        NSDictionary *linksDictionary = [jsonDictionary objectForKey:@"links"];
-        self.reviews = [linksDictionary objectForKey:@"reviews"];
-        NSDictionary *postersDictionary = [jsonDictionary objectForKey:@"posters"];
-        self.posterPic = [postersDictionary objectForKey:@"thumbnail"];
-        
-    }
-    return self;
-}
-
+//- (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary {
+//    
+//    if (self = [self init]) {
+//        self.name = [jsonDictionary objectForKey:@"name"];
+//        self.address = [jsonDictionary objectForKey:@"address"];
+//        self.idNumber = [jsonDictionary objectForKey:@"id"];
+//        NSNumber *myLat = [jsonDictionary objectForKey:@"lat"];
+//        self.latitude = [myLat doubleValue];
+//        NSNumber *myLong = [jsonDictionary objectForKey:@"lng"];
+//        self.longitude = [myLong doubleValue];
+//        
+//    }
+//    return self;
+//}
 
 @end

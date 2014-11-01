@@ -136,12 +136,12 @@
                 NSLog(@"theatres: %@", theatres);
                 NSLog(@"self.theatresArray: %@", self.theatresArray);
                 
-                for (Theatre* currentTheatre in self.theatresArray) {
+                for (TheatreMO* currentTheatre in self.theatresArray) {
                     
                     CustomAnnotation *marker = [[CustomAnnotation alloc] init];
                     CLLocationCoordinate2D theatreLocation;
-                    theatreLocation.latitude = [currentTheatre.latitude doubleValue];
-                    theatreLocation.longitude = [currentTheatre.longitude doubleValue];
+                    theatreLocation.latitude = currentTheatre.latitude;
+                    theatreLocation.longitude = currentTheatre.longitude;
                     marker.coordinate = theatreLocation;
                     marker.title = currentTheatre.name;
                     marker.subtitle = currentTheatre.address;

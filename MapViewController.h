@@ -13,9 +13,7 @@
 #import <CoreLocation/CLPlacemark.h>
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
-#import "Theatre.h"
 #import "TheatreBuilder.h"
-#import "Movie.h"
 #import "CustomAnnotation.h"
 #import "CoreDataStack.h"
 #import <CoreData/CoreData.h>
@@ -27,7 +25,7 @@
 
 - (IBAction)goBack:(id)sender;
 
-@property (nonatomic, strong) Movie *movie;
+@property (nonatomic, strong) MovieMO *movie;
 @property (nonatomic, strong) NSMutableArray *theatresArray;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -35,6 +33,6 @@
 @property (strong, nonatomic) NSString *myAddress;
 @property (strong, nonatomic) NSString *myPostalCode;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

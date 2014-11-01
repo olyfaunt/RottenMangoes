@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieBuilder.h"
-#import "Movie.h"
 #import "MovieCell.h"
-#import "ReviewsBuilder.h"
-#import "Reviews.h"
 #import "MapViewController.h"
 #import "CoreDataStack.h"
 #import <CoreData/CoreData.h>
@@ -21,7 +18,7 @@
 
 @interface MyTableViewController : UITableViewController <UITextViewDelegate>
 
-@property (nonatomic, strong) Movie *movie;
+@property (nonatomic, strong) MovieMO *movie;
 @property (nonatomic, strong) NSMutableArray *reviewsArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -32,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *criticLabel;
 @property (weak, nonatomic) IBOutlet UITextView *reviewsTextView;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)goBack:(id)sender;
 
