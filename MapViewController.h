@@ -17,6 +17,11 @@
 #import "TheatreBuilder.h"
 #import "Movie.h"
 #import "CustomAnnotation.h"
+#import "CoreDataStack.h"
+#import <CoreData/CoreData.h>
+#import "MovieMO.h"
+#import "ShowtimeMO.h"
+#import "TheatreMO.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
@@ -29,5 +34,7 @@
 @property (strong, nonatomic) CLGeocoder *myGeocoder;
 @property (strong, nonatomic) NSString *myAddress;
 @property (strong, nonatomic) NSString *myPostalCode;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

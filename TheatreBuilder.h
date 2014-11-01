@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Theatre.h"
+#import "TheatreMO.h"
 
 @interface TheatreBuilder : NSObject
 

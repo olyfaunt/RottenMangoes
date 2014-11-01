@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CoreDataStack.h"
 
 @interface MovieBuilder : NSObject
 

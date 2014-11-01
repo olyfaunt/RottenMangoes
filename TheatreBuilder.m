@@ -32,7 +32,7 @@
         // Iterate through the array of dictionaries
         for(id currentTheatre in dictsArray) {
             // Create a new Movie object for each one and initialise it with information in the dictionary
-            Theatre *theatre = [[Theatre alloc] initWithJSONDictionary:currentTheatre];
+            TheatreMO *theatre = [[TheatreMO alloc] initWithJSONDictionary:currentTheatre];
             [self.theatresArray addObject:theatre];
         }
         

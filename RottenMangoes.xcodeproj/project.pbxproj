@@ -19,20 +19,23 @@
 		992A14181A00E3D400606F97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992A14161A00E3D400606F97 /* LaunchScreen.xib */; };
 		992A14241A00E3D400606F97 /* RottenMangoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14231A00E3D400606F97 /* RottenMangoesTests.m */; };
 		992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A142F1A00EAAE00606F97 /* MovieBuilder.m */; };
-		992A14331A00EB0700606F97 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A14321A00EB0700606F97 /* Movie.m */; };
 		993D0EFB1A0231CA00D42FAF /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 993D0EFA1A0231CA00D42FAF /* map.png */; };
 		993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0EFD1A0232B000D42FAF /* MapViewController.m */; };
 		993D0F041A02A98300D42FAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D0F031A02A98300D42FAF /* MapKit.framework */; };
-		993D0F071A02B0F200D42FAF /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D0F061A02B0F200D42FAF /* Theatre.m */; };
 		993D0F091A02B86B00D42FAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D0F081A02B86B00D42FAF /* CoreLocation.framework */; };
 		993F87491A019F090086AA04 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87481A019F090086AA04 /* MovieCell.m */; };
 		993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874B1A01A3630086AA04 /* MyCollectionViewController.m */; };
 		993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F874E1A01B0AE0086AA04 /* MyTableViewController.m */; };
-		993F87521A01BFE60086AA04 /* Reviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87511A01BFE60086AA04 /* Reviews.m */; };
-		993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 993F87541A01CA820086AA04 /* ReviewsBuilder.m */; };
 		999909781A033C9600D539EA /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 999909771A033C9600D539EA /* CustomAnnotation.m */; };
 		9999097A1A03405700D539EA /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 999909791A03405700D539EA /* pin.png */; };
 		9999097C1A0344D000D539EA /* pin_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9999097B1A0344D000D539EA /* pin_blue.png */; };
+		999909801A040BEB00D539EA /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999097F1A040BEB00D539EA /* CoreDataStack.m */; };
+		999909821A040C0D00D539EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999909811A040C0D00D539EA /* UIKit.framework */; };
+		999909841A040C1700D539EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999909831A040C1700D539EA /* CoreData.framework */; };
+		999909881A040D2200D539EA /* RottenMangoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 999909861A040D2200D539EA /* RottenMangoes.xcdatamodeld */; };
+		9999098B1A0419FB00D539EA /* TheatreMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999098A1A0419FB00D539EA /* TheatreMO.m */; };
+		9999098E1A0419FB00D539EA /* ShowtimeMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999098D1A0419FB00D539EA /* ShowtimeMO.m */; };
+		999909911A0419FB00D539EA /* MovieMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 999909901A0419FB00D539EA /* MovieMO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +69,10 @@
 		992A14231A00E3D400606F97 /* RottenMangoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenMangoesTests.m; sourceTree = "<group>"; };
 		992A142E1A00EAAE00606F97 /* MovieBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieBuilder.h; sourceTree = "<group>"; };
 		992A142F1A00EAAE00606F97 /* MovieBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieBuilder.m; sourceTree = "<group>"; };
-		992A14311A00EB0700606F97 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		992A14321A00EB0700606F97 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		993D0EFA1A0231CA00D42FAF /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		993D0EFC1A0232B000D42FAF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		993D0EFD1A0232B000D42FAF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		993D0F031A02A98300D42FAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		993D0F051A02B0F200D42FAF /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theatre.h; path = ../Theatre.h; sourceTree = "<group>"; };
-		993D0F061A02B0F200D42FAF /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theatre.m; path = ../Theatre.m; sourceTree = "<group>"; };
 		993D0F081A02B86B00D42FAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		993F87471A019F090086AA04 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		993F87481A019F090086AA04 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
@@ -81,14 +80,21 @@
 		993F874B1A01A3630086AA04 /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
 		993F874D1A01B0AE0086AA04 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		993F874E1A01B0AE0086AA04 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
-		993F87501A01BFE60086AA04 /* Reviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reviews.h; sourceTree = "<group>"; };
-		993F87511A01BFE60086AA04 /* Reviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reviews.m; sourceTree = "<group>"; };
-		993F87531A01CA820086AA04 /* ReviewsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsBuilder.h; path = ../ReviewsBuilder.h; sourceTree = "<group>"; };
-		993F87541A01CA820086AA04 /* ReviewsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsBuilder.m; path = ../ReviewsBuilder.m; sourceTree = "<group>"; };
 		999909761A033C9600D539EA /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotation.h; path = ../CustomAnnotation.h; sourceTree = "<group>"; };
 		999909771A033C9600D539EA /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotation.m; path = ../CustomAnnotation.m; sourceTree = "<group>"; };
 		999909791A03405700D539EA /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		9999097B1A0344D000D539EA /* pin_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_blue.png; sourceTree = "<group>"; };
+		9999097E1A040BEB00D539EA /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		9999097F1A040BEB00D539EA /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		999909811A040C0D00D539EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		999909831A040C1700D539EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		999909871A040D2200D539EA /* RottenMangoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RottenMangoes.xcdatamodel; sourceTree = "<group>"; };
+		999909891A0419FB00D539EA /* TheatreMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheatreMO.h; sourceTree = "<group>"; };
+		9999098A1A0419FB00D539EA /* TheatreMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheatreMO.m; sourceTree = "<group>"; };
+		9999098C1A0419FB00D539EA /* ShowtimeMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowtimeMO.h; sourceTree = "<group>"; };
+		9999098D1A0419FB00D539EA /* ShowtimeMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowtimeMO.m; sourceTree = "<group>"; };
+		9999098F1A0419FB00D539EA /* MovieMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieMO.h; sourceTree = "<group>"; };
+		999909901A0419FB00D539EA /* MovieMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieMO.m; sourceTree = "<group>"; };
 		D5C5D254AE66690CCBDA223D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999909841A040C1700D539EA /* CoreData.framework in Frameworks */,
+				999909821A040C0D00D539EA /* UIKit.framework in Frameworks */,
 				9916C1311A02C66F00389937 /* AddressBook.framework in Frameworks */,
 				9916C1321A02C66F00389937 /* AddressBookUI.framework in Frameworks */,
 				993D0F091A02B86B00D42FAF /* CoreLocation.framework in Frameworks */,
@@ -128,10 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				9916C1361A02D52000389937 /* vancouver.gpx */,
-				9916C12F1A02C66F00389937 /* AddressBook.framework */,
-				9916C1301A02C66F00389937 /* AddressBookUI.framework */,
-				993D0F081A02B86B00D42FAF /* CoreLocation.framework */,
-				993D0F031A02A98300D42FAF /* MapKit.framework */,
 				992A14061A00E3D400606F97 /* RottenMangoes */,
 				992A14201A00E3D400606F97 /* RottenMangoesTests */,
 				992A14051A00E3D400606F97 /* Products */,
@@ -152,14 +156,15 @@
 		992A14061A00E3D400606F97 /* RottenMangoes */ = {
 			isa = PBXGroup;
 			children = (
+				9999097D1A040BD400D539EA /* Core Data */,
 				992A14111A00E3D400606F97 /* Main.storyboard */,
 				992A140B1A00E3D400606F97 /* AppDelegate.h */,
 				992A140C1A00E3D400606F97 /* AppDelegate.m */,
 				993D0EFF1A02350200D42FAF /* ViewControllers */,
 				993D0F001A02351200D42FAF /* Objects */,
 				992A14141A00E3D400606F97 /* Images.xcassets */,
-				992A14161A00E3D400606F97 /* LaunchScreen.xib */,
 				992A14071A00E3D400606F97 /* Supporting Files */,
+				992A14161A00E3D400606F97 /* LaunchScreen.xib */,
 				993F87471A019F090086AA04 /* MovieCell.h */,
 				993F87481A019F090086AA04 /* MovieCell.m */,
 			);
@@ -208,12 +213,6 @@
 		993D0F001A02351200D42FAF /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				992A14311A00EB0700606F97 /* Movie.h */,
-				992A14321A00EB0700606F97 /* Movie.m */,
-				993F87501A01BFE60086AA04 /* Reviews.h */,
-				993F87511A01BFE60086AA04 /* Reviews.m */,
-				993D0F051A02B0F200D42FAF /* Theatre.h */,
-				993D0F061A02B0F200D42FAF /* Theatre.m */,
 				999909761A033C9600D539EA /* CustomAnnotation.h */,
 				999909771A033C9600D539EA /* CustomAnnotation.m */,
 				993D0F021A02354C00D42FAF /* Project Images */,
@@ -227,8 +226,6 @@
 			children = (
 				992A142E1A00EAAE00606F97 /* MovieBuilder.h */,
 				992A142F1A00EAAE00606F97 /* MovieBuilder.m */,
-				993F87531A01CA820086AA04 /* ReviewsBuilder.h */,
-				993F87541A01CA820086AA04 /* ReviewsBuilder.m */,
 				9916C1331A02CC5800389937 /* TheatreBuilder.h */,
 				9916C1341A02CC5800389937 /* TheatreBuilder.m */,
 			);
@@ -245,9 +242,31 @@
 			name = "Project Images";
 			sourceTree = "<group>";
 		};
+		9999097D1A040BD400D539EA /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				9999097E1A040BEB00D539EA /* CoreDataStack.h */,
+				9999097F1A040BEB00D539EA /* CoreDataStack.m */,
+				999909861A040D2200D539EA /* RottenMangoes.xcdatamodeld */,
+				9999098F1A0419FB00D539EA /* MovieMO.h */,
+				999909901A0419FB00D539EA /* MovieMO.m */,
+				9999098C1A0419FB00D539EA /* ShowtimeMO.h */,
+				9999098D1A0419FB00D539EA /* ShowtimeMO.m */,
+				999909891A0419FB00D539EA /* TheatreMO.h */,
+				9999098A1A0419FB00D539EA /* TheatreMO.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		C9B383B7A434240D5FDFD2D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9916C12F1A02C66F00389937 /* AddressBook.framework */,
+				9916C1301A02C66F00389937 /* AddressBookUI.framework */,
+				993D0F081A02B86B00D42FAF /* CoreLocation.framework */,
+				993D0F031A02A98300D42FAF /* MapKit.framework */,
+				999909831A040C1700D539EA /* CoreData.framework */,
+				999909811A040C0D00D539EA /* UIKit.framework */,
 				2727D7A416501F2774D891D1 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -392,19 +411,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999909911A0419FB00D539EA /* MovieMO.m in Sources */,
 				992A14301A00EAAE00606F97 /* MovieBuilder.m in Sources */,
-				993F87521A01BFE60086AA04 /* Reviews.m in Sources */,
-				993F87551A01CA820086AA04 /* ReviewsBuilder.m in Sources */,
+				999909881A040D2200D539EA /* RottenMangoes.xcdatamodeld in Sources */,
 				9916C1351A02CC5800389937 /* TheatreBuilder.m in Sources */,
 				993F87491A019F090086AA04 /* MovieCell.m in Sources */,
-				992A14331A00EB0700606F97 /* Movie.m in Sources */,
 				993F874C1A01A3630086AA04 /* MyCollectionViewController.m in Sources */,
-				993D0F071A02B0F200D42FAF /* Theatre.m in Sources */,
+				9999098E1A0419FB00D539EA /* ShowtimeMO.m in Sources */,
 				993F874F1A01B0AE0086AA04 /* MyTableViewController.m in Sources */,
+				999909801A040BEB00D539EA /* CoreDataStack.m in Sources */,
 				993D0EFE1A0232B000D42FAF /* MapViewController.m in Sources */,
 				992A140D1A00E3D400606F97 /* AppDelegate.m in Sources */,
 				992A140A1A00E3D400606F97 /* main.m in Sources */,
 				999909781A033C9600D539EA /* CustomAnnotation.m in Sources */,
+				9999098B1A0419FB00D539EA /* TheatreMO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +550,7 @@
 				INFOPLIST_FILE = RottenMangoes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -543,6 +564,7 @@
 				INFOPLIST_FILE = RottenMangoes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -613,6 +635,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		999909861A040D2200D539EA /* RottenMangoes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				999909871A040D2200D539EA /* RottenMangoes.xcdatamodel */,
+			);
+			currentVersion = 999909871A040D2200D539EA /* RottenMangoes.xcdatamodel */;
+			path = RottenMangoes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 992A13FC1A00E3D400606F97 /* Project object */;
 }

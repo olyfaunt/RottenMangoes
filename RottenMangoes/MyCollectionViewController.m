@@ -8,7 +8,11 @@
 
 #import "MyCollectionViewController.h"
 
-@interface MyCollectionViewController () <UICollectionViewDataSource>
+@interface MyCollectionViewController () <UICollectionViewDataSource, NSFetchedResultsControllerDelegate> {
+    NSFetchedResultsController *fetchedResultsController;
+    NSArray *arrayOfMovies;
+}
+
 
 @end
 
@@ -19,23 +23,76 @@ static NSString *const kIdentifier = @"MovieCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.movies = [NSMutableArray array];
-    self.reviewsArray = [NSMutableArray array];
+    self.movies = [[self moviesInDatabase] mutableCopy]; //all movies currently in database, FETCHED
     
-    NSString *dataUrl = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=c9zzxwtuc3q2tftqata3k59w&page_limit=50";
-    NSURL *url = [NSURL URLWithString:dataUrl];
-    
-    MovieBuilder *movieBuilder = [[MovieBuilder alloc] init];
-    
-    [movieBuilder getMoviesFromRottenMangoes:url withCompletion:^(NSMutableArray *movies) {
-        [self.movies addObjectsFromArray:movies];
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update the UI
-            [self.collectionView reloadData];
-        });
+    //if there we already have an array of movies
+    if (self.movies !=nil) {
         
-    }];
+        self.movies = [NSMutableArray array];
+        self.updatedMovies = [NSMutableArray array];
+        
+        //get updatedMovies array
+        NSString *dataUrl = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=c9zzxwtuc3q2tftqata3k59w&page_limit=50";
+        NSURL *url = [NSURL URLWithString:dataUrl];
+        MovieBuilder *movieBuilder = [[MovieBuilder alloc] init];
+        [movieBuilder getMoviesFromRottenMangoes:url withCompletion:^(NSMutableArray *movies) {
+            [self.updatedMovies addObjectsFromArray:movies];
+            
+            // this block needs to trigger the code w/ enumerations (b/c asynchronous call) *************
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self compareMovies];
+            });
+            
+        }];
+    }  else if (self.movies == nil) {
+        //query RT API, do create all movies as we did originally.
+        // create new builder object to help initialize movie attributes from json dictonaries returned from Rotten Tomatoes API
+        //[coreDataStack saveContext];
+        //dispatch_async - update UI in main queue
+        
+        //***************************************************************
+        
+        NSString *dataUrl = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=c9zzxwtuc3q2tftqata3k59w&page_limit=50";
+        NSURL *url = [NSURL URLWithString:dataUrl];
+        MovieBuilder *movieBuilder = [[MovieBuilder alloc] init];
+        [movieBuilder getMoviesFromRottenMangoes:url withCompletion:^(NSMutableArray *movies) {
+            [self.movies addObjectsFromArray:movies];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Update the UI
+                [self.collectionView reloadData];
+            });
+            
+        }];
+        
+        
+    }
+
+    
+    //////////////////////////////////////////////////
+    
+    // OLD CODE:
+//    self.movies = [NSMutableArray array];
+//    self.reviewsArray = [NSMutableArray array];
+//    self.updatedMovies = [NSMutableArray array];
+//    
+//    
+//    NSString *dataUrl = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=c9zzxwtuc3q2tftqata3k59w&page_limit=50";
+//    NSURL *url = [NSURL URLWithString:dataUrl];
+//    
+//    MovieBuilder *movieBuilder = [[MovieBuilder alloc] init];
+//    
+//    [movieBuilder getMoviesFromRottenMangoes:url withCompletion:^(NSMutableArray *movies) {
+//        [self.movies addObjectsFromArray:movies];
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            // Update the UI
+//            [self.collectionView reloadData];
+//        });
+//        
+//    }];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,6 +101,53 @@ static NSString *const kIdentifier = @"MovieCell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+
+}
+
+
+-(void) compareMovies {
+    //for each movie in self.movies database, if {[find in self.updatedMovies]=nil - don't find, delete movie} else {nothing} // compare movieID instead (jsonDictionaries vs movie objects)
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    
+    for (id currentMovie in self.movies) {
+    
+        NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray: self.updatedMovies];
+        
+        if ([countedSet countForObject:currentMovie]==0) {
+            [[coreDataStack managedObjectContext] deleteObject:currentMovie];
+            [coreDataStack saveContext];
+            break;
+        } else {
+            break;
+        }
+    }
+    
+    //for each updatedMovie in self.updatedMovies, if {[find in self.movies]=nil - don't find, create new MovieMO object} else {nothing}
+    //filtered array with predicate
+    
+    for (id currentUpdatedMovie in self.updatedMovies) {
+        NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray: self.movies];
+        
+        if ([countedSet countForObject:currentUpdatedMovie]==0) {
+            
+            //create new NSManagedObject, insert it into MOC, and set its attributes, save MOC
+            MovieMO *movie = [NSEntityDescription insertNewObjectForEntityForName:@"MovieMO" inManagedObjectContext:coreDataStack.managedObjectContext];
+            movie.title = [currentUpdatedMovie objectForKey:@"title"];
+            movie.year = [currentUpdatedMovie objectForKey:@"year"];
+            movie.idNumber = [currentUpdatedMovie objectForKey:@"id"];
+            movie.rating = [currentUpdatedMovie objectForKey:@"rating"];
+            movie.theaterReleaseDate = [[currentUpdatedMovie objectForKey:@"release_dates"] objectForKey:@"theater"];
+            movie.synopsis = [currentUpdatedMovie objectForKey:@"synopsis"];
+            movie.posterPic = [[currentUpdatedMovie objectForKey:@"posters"] objectForKey:@"thumbnail"];
+            
+            [coreDataStack saveContext];
+            break;
+        } else {
+            break;
+        }
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,6 +202,27 @@ static NSString *const kIdentifier = @"MovieCell";
     }
 }
 
+
+#pragma mark - NSFetchedResultsController
+
+//get titles of all MovieMOs in database
+-(NSArray*)moviesInDatabase {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MoviesMO" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        
+    } else {
+        NSLog(@"%@", result);
+    }
+    
+    return result;
+}
 
 #pragma mark <UICollectionViewDelegate>
 

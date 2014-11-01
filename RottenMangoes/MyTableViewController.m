@@ -19,7 +19,7 @@
     
     self.reviewsArray = [NSMutableArray array];
     
-    self.titleLabel.text = (self.movie.title.length) ? self.movie.title : @"No title available"; // if not nil, do 1, else do 2.
+    self.titleLabel.text = (self.movie.title.length) ? self.movie.title : @"No title available";
     self.yearLabel.text = (self.movie.year) ? [self.movie.year stringValue] : @"N/A";
     self.ratingLabel.text = (self.movie.rating.length) ? self.movie.rating : @"N/A";
     self.releaseDateLabel.text = (self.movie.theaterReleaseDate) ? self.movie.theaterReleaseDate : @"N/A";

@@ -13,6 +13,11 @@
 #import "ReviewsBuilder.h"
 #import "Reviews.h"
 #import "MapViewController.h"
+#import "CoreDataStack.h"
+#import <CoreData/CoreData.h>
+#import "MovieMO.h"
+#import "ShowtimeMO.h"
+#import "TheatreMO.h"
 
 @interface MyTableViewController : UITableViewController <UITextViewDelegate>
 
@@ -26,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *synopsisTextView;
 @property (weak, nonatomic) IBOutlet UILabel *criticLabel;
 @property (weak, nonatomic) IBOutlet UITextView *reviewsTextView;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)goBack:(id)sender;
 
