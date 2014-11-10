@@ -5,4 +5,6 @@ RottenMangoes
 
 We were tasked with creating an iOS client for Rotten Tomatoes by using JSON & XML API endpoints to fetch data. I used UICollectionView to render 50 movies returned from the website, working with SDWebImage. From the details page of the movie they select, users are able to open a map showing pins (custom annotations) of theatres nearby that are playing that movie. The app is able to do this by requesting the user's current location and reverse geocoding to find their postal code.
 
+![rmvideo480](https://cloud.githubusercontent.com/assets/7607614/4969902/f993ee1e-6871-11e4-8089-32b521bffce7.gif)
+
 In Progress: Core Data capabilities tba.
