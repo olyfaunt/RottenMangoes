@@ -13,7 +13,7 @@
 #import "MyTableViewController.h"
 #import "Reviews.h"
 #import "ReviewsBuilder.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 
 @interface MyCollectionViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>

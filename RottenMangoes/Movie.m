@@ -18,11 +18,11 @@
         self.idNumber = [jsonDictionary objectForKey:@"id"];
         self.rating = [jsonDictionary objectForKey:@"mpaa_rating"];
         NSDictionary *releaseDictionary = [jsonDictionary objectForKey:@"release_dates"];
-        self.theaterReleaseDate = [releaseDictionary objectForKey:@"theater"];
+        self.theaterReleaseDate =
         self.synopsis = [jsonDictionary objectForKey:@"synopsis"];
         NSDictionary *linksDictionary = [jsonDictionary objectForKey:@"links"];
         self.reviews = [linksDictionary objectForKey:@"reviews"];
-        NSDictionary *postersDictionary = [jsonDictionary objectForKey:@"posters"];
+        NSDictionary *postersDicti [releaseDictionary objectForKey:@"theater"];onary = [jsonDictionary objectForKey:@"posters"];
         self.posterPic = [postersDictionary objectForKey:@"thumbnail"];
         
     }
